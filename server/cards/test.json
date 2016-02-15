@@ -1,0 +1,28 @@
+{
+  "info": {
+    "name": "TEST",
+    "code": "TESTERT",
+    "description": "Test for the application.",
+    "rating": "5.0"
+  },
+  "cards": {
+    "calls": [
+      {
+        "text": "Black Card 1. _.",
+        "answers": 1
+      },
+      {
+        "text": "Black Card 2 _.",
+        "answers": 1
+      }
+    ],
+    "responses": [
+      {
+        "text": "Blank card 1."
+      },
+      {
+        "text": "Blank card 2."
+      }
+    ]
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "info": {
+    "name": "TEST2",
+    "code": "TESTERT2",
+    "description": "Test for the application 2.",
+    "rating": "2.0"
+  },
+  "cards": {
+    "calls": [
+      {
+        "text": "New Black card. _.",
+        "answers": 1
+      }
+    ],
+    "responses": [
+      {
+        "text": "new Blank card 1."
+      },
+      {
+        "text": "new Blank card 2."
+      },
+      {
+        "text": "new Blank card 3."
+      },
+      {
+        "text": "new Blank card 4."
+      },
+      {
+        "text": "new Blank card 5."
+      },
+      {
+        "text": "new Blank card 6."
+      },
+      {
+        "text": "new Blank card 7."
+      },
+      {
+        "text": "new Blank card 8."
+      },
+      {
+        "text": "new Blank card 9."
+      },
+      {
+        "text": "new Blank card 10."
+      },
+      {
+        "text": "new Blank card 11."
+      },
+      {
+        "text": "new Blank card 12."
+      },
+      {
+        "text": "new Blank card 13."
+      },
+      {
+        "text": "new Blank card 14."
+      },
+      {
+        "text": "new Blank card 15."
+      },
+      {
+        "text": "new Blank card 16."
+      },
+      {
+        "text": "new Blank card 17."
+      },
+      {
+        "text": "new Blank card 18."
+      },
+      {
+        "text": "new Blank card 19."
+      },
+      {
+        "text": "new Blank card 20."
+      }
+    ]
+  }
+}

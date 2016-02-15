@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>NEOCards Against Humanity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" media="screen">
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="components/jquery/dist/jquery.js"></script>
+    <script src="components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="client/client.js"></script>
+    <link href="client/client.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">Cards Against Neofox</a>
+        </div>
+    </div>
+</nav>
+
+<!--
+
+----------- ZONE DE JEU -----------
+
+-->
+
+    <div id="showBlackCard">
+
+    </div>
+
+    <div id="gameArea">
+        <!-- template temple -->
+    </div>
+
+    <div id="hands">
+
+    </div>
+<!--
+-----------------------------------
+-->
+
+    <!-- Acceuil -->
+    <script id="intro-screen-template" type="text/template">
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">CARDS AGAINST NEOFOX</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="input-group">
+                                <div class="form-group">
+                                    <input type="text" class="form-control has-error" placeholder="Pseudal" id="name">
+                                </div>
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default form-control" type="button" id="join">Go in dat game!</button>
+                                </span>
+                            </div><!-- /input-group -->
+                        </div><!-- /.col-lg-6 -->
+                        <div class="row">
+                            <label id="error"></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </script>
+
+    <script id="lobby-template" type="text/template">
+        <div class="container">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Lobby</h3>
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="input-group">
+                            <div class="form-group">
+                                <div class="form-control" id="decklist"></div>
+                            </div>
+                            <span class="input-group-btn">
+                                <button class="form-control" id="addDecks">Ajout des decks</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-4 input-group">
+                            <div class="form-group">
+                                <input class="form-control" id="customDeck" placeholder="ASDFG6">
+                            </div>
+                            <span class="input-group-btn">
+                                <button class="form-control" id="addCustom">Ajout un deck custom</button>
+                            </span>
+                        </div><!-- /input-group -->
+                    </div>
+
+                    <div class="row">
+                        <ul id="playerList">
+
+                        </ul>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-3 col-md-offset-3">
+                            <div class="form-group">
+                                <input type="checkbox" class="form-control" id="start"/><label for="start">IMREADY</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </script>
+
+
+    <script id="game-template" type="text/template">
+        <div class="container-fluid">
+            <div class="row content">
+                <!-- BLACKCARD SET -->
+                <div id="blackCardSet" class="col-sm-2 sidenav">
+                    <!-- BLACK CARD -->
+                </div>
+                <!-- BLACKCARD SET -->
+                <!-- TABLE -->
+                <div class="col-sm-8">
+                    <div id="gameTable" class="gameTable">
+                        <div class="col-sm-3">
+                        </div>
+                    </div>
+                </div>
+                <!-- TABLE -->
+                <!-- SCOREBOARD -->
+                <div class="col-sm-2 sidenav">
+                    <div class="well">
+                        <div id="player1">
+                            <p><strong>JOUEUR 1 : 0 PTS</strong></p>
+                        </div>
+                        <div id="player2">
+                            <p>JOUEUR 2 : 0 PTS</p>
+                        </div>
+                        <div id="player3">
+                            <p>JOUEUR 3 : 0 PTS</p>
+                        </div>
+                        <div id="player4">
+                            <p>JOUEUR 4 : 0 PTS</p>
+                        </div>
+                    </div>
+                    <div class="well" style="height: 220px">
+                        log:
+                    </div>
+                </div>
+                <!-- SCOREBOARD -->
+            </div>
+        </div>
+
+        <footer class="container-fluid text-center">
+            <button id="sendChoice" style="color: black">SELECTIONNER</button>
+        </footer>
+
+        <div class="container-fluid">
+            <div class="row content">
+                <!-- BLACKCARD SET -->
+                <div id="hand" class="col-sm-12 sidenav">
+                </div>
+            </div>
+
+    </script>
+
+    <script id="scoreboard-template" type="text/template">
+        <div id="players"></div>
+    </script>
+
+
+
+</body>
+</html>
